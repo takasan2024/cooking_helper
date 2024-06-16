@@ -11,6 +11,19 @@
   </head>
 
   <body>
+     <header class="header">
+      <div class="header__bar row">
+        <h1 class="grid-6"><a href="/">Cooking Helper</a></h1>
+        <div class="user_nav grid-6">
+          <a class="post" href="/cookings/new">Cooking</a>
+        </div>
+      </div>
+    </header>
     <%= yield %>
+      <footer>
+      <p>
+        Copyright CookingHelper 2024.
+      </p>
+    </footer>
   </body>
 </html>

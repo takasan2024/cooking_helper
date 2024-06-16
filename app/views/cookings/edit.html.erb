@@ -1,0 +1,11 @@
+<div class="contents row">
+  <div class="container">
+    <h3>アレンジする</h3>
+    <%= form_with(model: @cooking, local: true) do |form| %>
+      <%= form.text_field :name, placeholder: "料理名" %>
+      <%= form.text_field :image, placeholder: "画像 Url" %>
+      <%= form.text_area :text, placeholder: "作り方", rows: "10" %>
+      <%= form.submit "グレードアップ" %>
+    <% end %>
+  </div>
+</div>
