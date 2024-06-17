@@ -5,13 +5,13 @@
       <%= render "devise/shared/error_messages", resource: resource %>
 
       <div class="field">
-        <%= f.label :ニックネーム %><br />
-        <%= f.text_field :ニックネーム %>
+        <%= f.label :ニックネーム %> <em>(6文字以下)</em><br />
+        <%= f.text_field :nickname, autofocus: true, maxlength: "6" %>
       </div>
 
       <div class="field">
         <%= f.label :メールアドレス %><br />
-        <%= f.email_field :メールアドレス %>
+        <%= f.email_field :email %>
       </div>
 
       <div class="field">
@@ -19,22 +19,22 @@
         <% if @minimum_password_length %>
           <em>(<%= @minimum_password_length %> 文字以上)</em>
         <% end %><br />
-        <%= f.password_field :パスワード, autocomplete: "off" %>
+        <%= f.password_field :password , autocomplete: "off" %>
       </div>
 
       <div class="field">
-        <%= f.label :パスワード再入力 %><br />
-        <%= f.password_field :パスワード再入力, autocomplete: "off" %>
+        <%= f.label :パスワード確認 %><br />
+        <%= f.password_field :password_kakunin, autocomplete: "off" %>
       </div>
 
       <div class="field">
         <%= f.label :性別 %><br />
-        <%= f.text_field :性別 %>
+        <%= f.text_field :seibetsu %>
       </div>
 
       <div class="field">
         <%= f.label :年齢 %><br />
-        <%= f.text_field :年齢 %>
+        <%= f.text_field :age %>
       </div>
 
       <div class="actions">
